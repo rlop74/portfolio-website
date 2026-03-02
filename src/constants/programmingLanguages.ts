@@ -7,5 +7,3 @@ export const programmingLanguages = [
     { name: "Typescript", logoUrl: typescriptLogo },
     { name: "Python", logoUrl: pythonLogo },
 ]
-
-export const programmingLanguagesLength = programmingLanguages.length;

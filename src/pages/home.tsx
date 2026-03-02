@@ -4,7 +4,6 @@ import { devopsStack } from "@/constants/devopsStack";
 import { frontendStack } from "@/constants/frontendStack";
 import {
     programmingLanguages,
-    programmingLanguagesLength,
 } from "@/constants/programmingLanguages";
 import { selfDescription } from "@/constants/selfDescription";
 
