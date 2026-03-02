@@ -1,5 +1,12 @@
 import { SmallCard } from "@/components/smallCard";
-import reactLogo from "@/assets/react.svg";
+import { backendStack } from "@/constants/backendStack";
+import { devopsStack } from "@/constants/devopsStack";
+import { frontendStack } from "@/constants/frontendStack";
+import {
+    programmingLanguages,
+    programmingLanguagesLength,
+} from "@/constants/programmingLanguages";
+import { selfDescription } from "@/constants/selfDescription";
 
 export const Home = () => {
     return (
@@ -14,17 +21,46 @@ export const Home = () => {
                     <p className="text-2xl font-bold">Full Stack Developer</p>
                 </div>
             </div>
-            <div className="text-center">Description</div>
+            <p className="whitespace-pre-wrap">{selfDescription}</p>
 
-            {/* tech stack */}
-            <div className="grid grid-cols-5 gap-5 px-50">
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
-                <SmallCard logoUrl={reactLogo} name="React" />
+            {/* programming languages */}
+            <h2 className="text-3xl font-bold">Languages</h2>
+            <div className={`flex gap-5 px-20`}>
+                {programmingLanguages.map((item) => (
+                    <div key={item.name}>
+                        <SmallCard name={item.name} logoUrl={item.logoUrl} />
+                    </div>
+                ))}
+            </div>
+
+            {/* front end */}
+            <h2 className="text-3xl font-bold">Frontend</h2>
+            <div className={`flex gap-5 px-20`}>
+                {frontendStack.map((item) => (
+                    <div key={item.name}>
+                        <SmallCard name={item.name} logoUrl={item.logoUrl} />
+                    </div>
+                ))}
+            </div>
+
+            {/* back end */}
+            <h2 className="text-3xl font-bold">Backend</h2>
+            <div className={`flex gap-5 px-20`}>
+                {backendStack.map((item) => (
+                    <div key={item.name}>
+                        <SmallCard name={item.name} logoUrl={item.logoUrl} />
+                    </div>
+                ))}
+            </div>
+
+            {/* devops */}
+            <h2 className="text-3xl font-bold">DevOps</h2>
+            <div className={`flex gap-5 px-20`}>
+                {devopsStack.map((item) => (
+                    <div key={item.name}>
+                        <SmallCard name={item.name} logoUrl={item.logoUrl} />
+                    </div>
+                ))}
             </div>
         </div>
     );
